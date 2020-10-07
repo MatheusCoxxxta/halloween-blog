@@ -1,0 +1,50 @@
+*, *:after, *:before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background: #fff;
+  max-width: 1140;
+}
+
+.anim-body{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: url('../images/background.png') center center;
+  background-size: cover;
+}
+
+.fog-anim{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: url('../images/fog.png') repeat-x;
+  background-size: 200% auto;
+  background-position: 0 bottom;
+  animation: fogAnim 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 12;
+}
+
+@keyframes fogAnim{
+  0%{ background-position: -200% bottom }
+  100%{ background-position: 0% bottom }
+}
+
+.container {
+  width: 940;
+}
+
+.haunted-places {
+  display: flex;
+  width: 220px;
+  z-index: 9999999999;
+}
